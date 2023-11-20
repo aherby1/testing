@@ -1,0 +1,19 @@
+type token =
+    RPAREN
+  | LPAREN
+  | LETPROVE
+  | INDUCTION of string
+  | IDENT of string
+  | EQUALS
+  | EOF
+  | COLON
+  | AXIOM
+val menhir_begin_marker : int
+val xv_main : Ast.program
+val xv_expression : Ast.expression
+val xv_declarations : Ast.program
+val xv_declaration : Ast.declaration
+val xv_arguments : Ast.arguments
+val xv_argument : string * string
+val xv_arg_list : Ast.arguments
+val menhir_end_marker : int
